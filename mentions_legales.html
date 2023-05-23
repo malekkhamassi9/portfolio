@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+          <span style="align-items: right;" onclick="openNav()">Menu</span>
+        </div> 
+    </header>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="index.html">Accueil</a>
+          <a href="descritption.html">Mes objectifs et passions</a>
+          <a href="certification.html">Certifications</a>
+          <a href="alternance.html">Alternance</a>
+          <a href="projet.html">Projets</a>
+          <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="left-column">
+          <h2>Mentions légales:</h2>
+          <br>
+          <h4>Site web:</h4>
+          <p></p>
+          <br>
+          <h4>Propriétaire:</h4>
+          <p>Malek KHAMASSI</p>
+          <br>
+          <h4>Publication Manager, Webmaster:</h4>
+          <p>Malek KHAMASSI</p>
+          <br>
+          <h4>Hébergeur:</h4>
+          <p>Github</p>
+          <br>
+          <br><br>
+          <br><br>
+          <br>
+        </div>
+    </main>
+
+    <footer class="footer">
+      
+    </footer>
+
+    <script>
+        function openNav() {
+          document.getElementById("myNav").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("myNav").style.width = "0%";
+        }
+        </script>
+</body>

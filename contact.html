@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+        <title>Portfolio</title>
+    </head>
+    <body>
+
+        <header class="header">
+          <div class="logo">
+            <span style="align-items: right;" onclick="openNav()">Menu</span>
+          </div> 
+        </header>
+
+    
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Accueil</a>
+                <a href="descritption.html">Mes objectifs et passions</a>
+                <a href="alternance.html">Alternance</a>
+                <a href="projet.html">Projets</a>
+                <a href="certification.html">Certifications</a>
+            </div>
+        </div>
+        <main class="container">
+            
+
+            
+            <form id="contact" action="https://formsubmit.co/malekkhamassi9@gmail.com" method="POST">
+                <div class="container2">
+                  <div class="head">
+                    <h2>Me contacter</h2>
+                  </div>
+                  <input type="text" name="name" placeholder="Name" /><br />
+                  <input  type="email" name="email" placeholder="Email" /><br />
+                  <textarea type="text" name="message" placeholder="Message"></textarea><br />
+                  <button id="submit" type="submit">
+                    Send!
+                  </button>
+                </div>
+              </form>
+                </main>
+      
+        <footer class="footer">
+            <p><a href="mentions_legales.html" style="color: aliceblue;">Mentions Légales</a></p>
+        </footer>
+
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+
+            $(function() {
+    // validate
+                $("#contact").validate({
+                // Set the validation rules
+                    rules: {
+                        name: "required",
+                        email: {
+                        required: true,
+                        email: true
+                    },
+            message: "required",
+        },
+        // Specify the validation error messages
+        messages: {
+            name: "Please enter your name",
+            email: "Please enter a valid email address",
+            message: "Please enter a message",
+        },
+        // submit handler
+        submitHandler: function(form) {
+          //form.submit();
+           $(".message").show();
+           $(".message").fadeOut(4500);
+        }
+    });
+  });
+            </script>
+    </body>
+</html>
